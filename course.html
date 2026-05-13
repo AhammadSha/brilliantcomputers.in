@@ -1,0 +1,281 @@
+<?php $page = 'P03'; include 'includes/header.php';?>
+<?php include ROOT_PATH . '/includes/form-enroll.php'; ?>
+
+
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Courses </li> </ul>
+			<h1> All Courses </h1>
+			<p>Learn Software Courses from the Expert Trainers.</p>
+			<p>Explore new and trending free online courses.</p>
+		</div>
+	</div>
+</section>
+
+<style>
+.course_grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 40px;
+}
+
+.pagination a {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border-radius: 6px;
+	background: #eee;
+	color: #000;
+	font-weight: 600;
+}
+
+.pagination a.active {
+	background: #000;
+	color: #fff;
+}
+
+@media all and (max-width: 768px) {
+
+	.course_grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+}
+
+@media all and (max-width: 480px) {
+
+	.course_grid {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+}
+</style>
+<?php include ROOT_PATH . '/includes/course.php'; ?>
+<!-- ---------- ----- PAGE - COURSES ----- ---------- -->
+<section class="section_courses">
+	<div class="container">
+		<div class="course_row_">
+			<div class="course_col_">
+
+				<select class="courseSelect" onchange="courseSelect(this)">
+					</option value="course01"> Programming Languages     </option>
+					</option value="course02"> Web Development           </option>
+					</option value="course03"> Full Stack Development    </option>
+					</option value="course04"> Frontend                  </option>
+					</option value="course05"> Backend                   </option>
+					</option value="course06"> Frameworks / Libraries    </option>
+					</option value="course07"> Cloud Technologies        </option>
+					</option value="course08"> Data & Analytics          </option>
+					</option value="course09"> Accounting & Office Tools </option>
+					</option value="course10"> Designing & Multimedia    </option>
+					</option value="course11"> CAD / Engineering Design  </option>
+					</option value="course12"> Security & Networking     </option>
+					</option value="course13"> Advanced Technologies     </option>
+				</select>
+
+				<div class="courseBtns">
+					<button class="courseBtn" onclick="course(event, 'course00')" id="dOn"> All Courses          </button>
+					<button class="courseBtn" onclick="course(event, 'course01')">          Internship           </button>
+					<button class="courseBtn" onclick="course(event, 'course02')">          Placement Assistance </button>
+					<button class="courseBtn" onclick="course(event, 'course03')">          NASSCOM              </button>
+					<button class="courseBtn" onclick="course(event, 'course04')">          Full Stack           </button>
+					<button class="courseBtn" onclick="course(event, 'course05')">          Frameworks           </button>
+					<button class="courseBtn" onclick="course(event, 'course06')">          Digital Marketing    </button>
+					<button class="courseBtn" onclick="course(event, 'course07')">          Analytics            </button>
+					<button class="courseBtn" onclick="course(event, 'course08')">          Automations          </button>
+					<button class="courseBtn" onclick="course(event, 'course09')">          Data Base            </button>
+					<button class="courseBtn" onclick="course(event, 'course10')">          Web Development      </button>
+					<button class="courseBtn" onclick="course(event, 'course11')">          Data Science         </button>
+					<button class="courseBtn" onclick="course(event, 'course12')">          DevOps               </button>
+					<button class="courseBtn" onclick="course(event, 'course13')">          Soft Skills          </button>
+					<button class="courseBtn" onclick="course(event, 'course14')">          Mobile Technologies  </button>
+					<button class="courseBtn" onclick="course(event, 'course15')">          Mulesoft             </button>
+					<button class="courseBtn" onclick="course(event, 'course16')">          Software Testing     </button>
+					<button class="courseBtn" onclick="course(event, 'course17')">          Operating System     </button>
+					<button class="courseBtn" onclick="course(event, 'course18')">          Cloud Computing      </button>
+					<button class="courseBtn" onclick="course(event, 'course19')">          Programming          </button>
+				</div>
+			</div>
+
+
+
+			<div class="course_col_">
+				<div class="course_box_" id="course00">
+					<div class="course_grid">
+							<?php //displayCourses($courses); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course01">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'Internship'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course02">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'PlacementAssistance'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course03">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'NASSCOM'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course04">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'FullStack'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course05">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'Frameworks'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course06">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'DigitalMarketing'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course07">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'Analytics'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course08">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'Automations'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course09">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'DataBase'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course10">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'WebDevelopment'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course11">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'DataScience'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course12">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'DevOps'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course13">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'SoftSkills'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course14">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'MobileTechnologies'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course15">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'Mulesoft'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course16">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'SoftwareTesting'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course17">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'OperatingSystem'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course18">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'CloudComputing'); ?>
+					</div>
+				</div>
+
+				<div class="course_box_" id="course19">
+					<div class="course_grid">
+							<?php displayCourses($courses, 'Programming'); ?>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+
+<script>
+
+function courseSelect(select) {
+  var value = select.value;
+
+  var tabcontent = document.getElementsByClassName("course_box_");
+  for (var i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  document.getElementById(value).style.display = "block";
+}
+</script>
+
+
+<script>
+function course(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("course_box_");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("courseBtn");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("dOn").click();
+</script>
+
+
+
+</body>
+</html>

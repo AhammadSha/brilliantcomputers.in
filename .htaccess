@@ -1,0 +1,20 @@
+# Enable URL rewriting
+RewriteEngine On
+RewriteBase /
+
+# Serve .html and .php files without showing extension
+# (so /about loads about.html or about.php)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f [OR]
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# OPTIONAL: If .html not found, try .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L]
+
+# Make .html files execute PHP
+AddType application/x-httpd-php .htm .html
+
+AddType application/x-httpd-php .html

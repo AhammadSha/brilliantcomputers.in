@@ -1,0 +1,311 @@
+<?php $page = 'P01'; include 'includes/header.php';?>
+<?php include ROOT_PATH . '/includes/form-enroll.php'; ?>
+
+<!-- POPUP HTML -->
+<div id="Promotions" class="promotion_overlay">
+	<div class="popup_box">
+		<div class="promotion_card">
+			<div class="promotion_close"> ⛌ </div>
+			<div class="promotion_text">
+				<h3>Welcome!</h3>
+				<h2>Brilliant Computer Education</h2>
+			</div>
+			<div class="promotion_image"> <img src="about_image-02.jpg" alt=""> </div>
+			<div class="promotion_btn"> <a href="enquiry-form.html" class="popup_btn">GET FREE DEMO CLASS</a> </div>
+		</div>		
+	</div>
+</div>
+
+
+<style>
+
+
+.promotion_overlay { display: none; justify-content: center; align-items: center; padding: 16px;
+	position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 9999; }
+
+.promotion_card { display: block; width: 100%; max-width: 800px; padding: 32px; background: #fff; 
+	position: relative; animation: popupAnim 0.3s ease; text-align: center; border-radius: 12px; }
+
+.promotion_close { display: block; width: 24px; height: 24px; line-height: 24px; text-align: center; 
+	background: var(--bg1); position: absolute; top: 10px; right: 12px; font-size: 12px; font-weight: 800; cursor: pointer; border-radius: 50px; }
+
+.promotion_text { display: block; text-align: center;  }
+.promotion_text h2 { background: var(--gn2); background-clip: text; color: transparent; font-size: 32px; font-weight: 800; }
+.promotion_text h3 { font-size: 18px; font-weight: 500; }
+
+.promotion_image { width: 100%; display: block; border-radius: 12px; overflow: hidden; margin: 24px 0px; }
+.promotion_image img { width: 100%; height: auto; }
+
+.promotion_btn { display: block; text-align: center; }
+.promotion_btn a { display: inline-block; padding: 9px 24px; background: var(--gn2); color: #fff; border-radius: 6px; }
+
+@keyframes popupAnim {
+	from { transform: scale(0.8); opacity: 0; }
+	to { transform: scale(1); opacity: 1; }
+}
+
+@media all and (max-width: 480px) {
+	.promotion_card { padding: 24px 16px; }
+	.promotion_text h2 { font-size: 20px; }
+	.promotion_text h3 { font-size: 15px; }
+	.promotion_image { margin: 16px 0; }
+	.promotion_btn a { font-size: 14px; }
+}
+
+@media (min-width:480px) and (max-width: 992px) {
+
+}
+
+</style>
+
+
+<!-- ---------- ----- Hero Banner ----- ---------- -->
+<section class="hero-section">
+	<div class="banner_row">
+		<div class="banner_col">
+			<div class="hero_text">
+				<h2>#1 Software Training Institute</h2>
+				<h1>Best Software Training Institute in Andhra Pradesh</h1>
+				<p>Brilliant Computer Education is Andhra Pradesh's top rated software training institute in Ongole offering job oriented IT courses in Full Stack, Python, Java, React JS & Data Analytics, 10+ year industry expert trainers, real-world projects & 100% placement support.</p>
+				<a class="openEnroll">
+					<button class="btn_d "> Enroll Now — Free Demo </button>
+				</a>
+			</div>
+		</div>
+		<div class="banner_col">
+			<div class="hero_images">
+				<div class="hero_image"> <img src="assets/media/banner-01.png" alt="Brilliant Computer Education"> </div>
+				<div class="hero_shape"> <img src="assets/media/shape-01.png" alt="Brilliant Computer Education">  </div>
+				<div class="hero_shape"> <img src="assets/media/shape-02.png" alt="Brilliant Computer Education">  </div>
+			</div>
+		</div>
+		<div class="banner_col">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+					<div class="swiper-card">
+							<div class="banner__card">
+								<div class="image_box">
+									<img src="assets/media/course-web_development.jpg" alt="Brilliant Computer Education">
+									<img src="assets/media/course-web_development.jpg" alt="Brilliant Computer Education">
+								</div>
+								<div class="banner__info">
+									<h3> Web Development </h3>
+									<p>Learn Coding with In-Demand Programming Skills</p>
+									<div>
+										<span><em>★ ★ ★ ★ ⯪</em> 4.5</span>
+										<a href="<?= BASE_URL ?>courses/web-development.html"> Learn More → </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-card">
+							<div class="banner__card">
+								<div class="image_box">
+									<img src="assets/media/course-programming_courses.jpg" alt="Brilliant Computer Education">
+									<img src="assets/media/course-programming_courses.jpg" alt="Brilliant Computer Education">
+								</div>
+								<div class="banner__info">
+									<h3> Programming Courses </h3>
+									<p>Learn Coding with In-Demand Programming Skills</p>
+									<div>
+										<span><em>★ ★ ★ ★ ⯪</em> 4.5</span>
+										<a href="<?= BASE_URL ?>courses/programming-courses.html"> Learn More → </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="swiper-card">
+							<div class="banner__card">
+								<div class="image_box">
+									<img src="assets/media/course-cloud_computing.jpg" alt="Brilliant Computer Education">
+									<img src="assets/media/course-cloud_computing.jpg" alt="Brilliant Computer Education">
+								</div>
+								<div class="banner__info">
+									<h3> Cloud Computing </h3>
+									<p>Learn Coding with In-Demand Programming Skills</p>
+									<div>
+										<span><em>★ ★ ★ ★ ⯪</em> 4.5</span>
+										<a href="<?= BASE_URL ?>courses/cloud-computing.html"> Learn More → </a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+ 
+<!-- ---------- ----- Categories ----- ---------- -->
+<section class="sectionCategories">
+	<div class="container">
+		<div class="sectionHead">
+			<span>Categories</span>
+			<h2> Explore Top Courses Caterories That Change Yourself </h2>
+		</div>
+		<div class="category_row">
+			<div class="category_col">
+				<div class="category_icon"> <img src="assets/media/course_img-01.png" alt="Brilliant Computer Education">  </div>
+				<div class="category_text">
+					<a href="<?= BASE_URL ?>courses/full-stack-courses.html"> 
+						<h3> Full Stack Courses </h3> <p> 06 Courses </p>
+					</a>
+				</div>
+			</div>
+			<div class="category_col">
+				<div class="category_icon"> <img src="assets/media/course_img-02.png" alt="Brilliant Computer Education">  </div>
+				<div class="category_text">
+					<a href="<?= BASE_URL ?>courses/nasscom-courses.html">
+						<h3> Nasscom Courses </h3> <p> 06 Courses </p>
+					</a>
+				</div>
+			</div>
+						
+			<div class="category_col">
+				<div class="category_icon"> <img src="assets/media/course_img-03.png" alt="Brilliant Computer Education">  </div>
+				<div class="category_text">
+					<a href="<?= BASE_URL ?>courses/web-development.html">
+						<h3> Web Development </h3> <p> 06 Courses </p>
+					</a>
+				</div>
+			</div>
+
+			<div class="category_col">
+				<div class="category_icon"> <img src="assets/media/course_img-04.png" alt="Brilliant Computer Education">  </div>
+				<div class="category_text">
+					<a href="<?= BASE_URL ?>courses/digital-marketing.html">
+						<h3> Digital Marketing </h3> <p> 02 Courses </p>
+					</a>
+				</div>
+			</div>
+
+			<div class="category_col">
+				<div class="category_icon"> <img src="assets/media/course_img-05.png" alt="Brilliant Computer Education">  </div>
+				<div class="category_text">
+					<a href="<?= BASE_URL ?>courses/cloud-computing.html">
+						<h3> Cloud Computing </h3> <p> 15 Courses </p>
+					</a>
+				</div>
+			</div>
+
+			<div class="category_col">
+				<div class="category_icon"> <img src="assets/media/course_img-06.png" alt="Brilliant Computer Education">  </div>
+				<div class="category_text">
+					<a href="<?= BASE_URL ?>courses/internship-courses.html">
+						<h3> Internships </h3> <p> 03 Courses </p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- ----- Courses ----- ---------- -->
+<section class="widget_section bg1">
+	<div class="container">
+		<div class="sectionHead">
+			<span>Our Courses</span>
+			<h2> Explore new and trending free online courses. </h2>
+		</div>
+		<div class="row_course">
+			<?php include ROOT_PATH . '/includes/courses.php'; ?>
+			<?php displayCourses($courses, "CloudComputing", 8); ?>
+		</div>
+		<div class="center">
+			<a href="courses.html"> <button class="btn_b"> See All Courses  </button> </a>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- ----- Services ----- ---------- -->
+<section class="widget_section">
+	<div class="container">
+		<div class="sectionHead">
+			<h2> Our Training Services </h2>
+			<p>From Basic to Advanced, We Offer Classroom, Online, Weekend, and Corporate Training on a Wide Range of Software Courses.</p>
+		</div>
+		<div class="service_row">
+			<?php include ROOT_PATH . '/includes/services.php'; ?>
+			<?php displayservices($services, 'Services', 4); ?>
+		</div>
+		<div class="center">
+			<a href="services.html"> <button class="btn_b"> See All Services  </button> </a>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- ----- Why Choose Us ----- ---------- -->
+<section class="widget_section bg1">
+	<div class="container">
+		<?php include ROOT_PATH . '/includes/why-choose-us.php'; ?>
+	</div>
+</section>
+
+
+<!-- ---------- ----- Blog ----- ---------- -->
+<section class="widget_section">
+	<div class="container">
+		<div class="sectionHead">
+			<span>Our Blogs</span>
+			<h2> Explore new and trending free online courses. </h2>
+		</div>
+		<div class="row_blog">
+			<?php include ROOT_PATH . '/blog/blog.php';?>
+			<?php displayBlogs($blogs, 'blogs', 4); ?>
+		</div>
+		<div class="center">
+			<a href="blog.html"> <button class="btn_b"> See All Articles </button> </a>
+		</div>
+	</div>
+</section>
+
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+<script>
+var swiper = new Swiper(".swiper", {
+		effect: "cards",
+		cardsEffect: { rotate: true, },
+		grabCursor: true,
+		initialSlide: 2,
+		speed: 500,
+		loop: true,
+		mousewheel: {
+		invert: false,
+	},
+});
+</script>
+
+<!-- JAVASCRIPT -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+	const popup = document.getElementById("Promotions");
+	const closeBtn = document.querySelector(".promotion_close");
+
+	// OPEN POPUP AFTER 10 SECONDS
+	setTimeout(() => { popup.style.display = "flex"; }, 500);
+
+	// CLOSE POPUP
+	closeBtn.addEventListener("click", function () { popup.style.display = "none"; });
+
+	// CLOSE WHEN CLICK OUTSIDE
+	popup.addEventListener("click", function (e) {
+		if (e.target === popup) { popup.style.display = "none"; }
+	});
+});
+
+</script>
+
+</body>
+</html>

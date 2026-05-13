@@ -1,0 +1,76 @@
+<?php include 'includes/header.php';?>
+
+
+<style>
+
+{ background: linear-gradient(#1b063ecc, #1b063ecc), }
+
+/* FORM */
+.hero-form { background: #fff; padding: 20px 18px; border-radius: 16px; width: 800px; box-shadow: 0px 4px 50px rgba(4, 8, 19, 0.1); }
+.hero-form h3 { font-size: 24px; line-height: 32px; font-weight: 700; text-align: center; color: #0f172a; margin-bottom: 6px; }
+.hero-form p { margin: 6px auto 16px auto; font-size: 14px; font-weight: 400; color: #475569; text-align: center; line-height: 20px; max-width: auto; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group.full-width { grid-column: 1 / -1; }
+.form-group { display: flex; flex-direction: column; gap: 4px; }
+.form-group label { font-size: 14px; font-weight: 600; color: #334155; padding-left: 6px; }
+
+.form-grid input,
+.form-grid select,
+.course-select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 8px; min-height: 40px; font-size: 14px; background: #fff; cursor: pointer; }
+.course-select:focus { outline: none; border-color: var(--pc); box-shadow: 0 0 0 2px rgb(45 108 223 / 20%); }
+
+.demo-btn { margin-top: 20px; width: 100%; height: auto; padding: 12px 8px;
+	background: var(--gn2); color: white; border: none; border-radius: 8px; font-weight: 700; font-size: 16px; transition: var(--ts); }
+.demo-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(61, 21, 95, 0.3); }
+
+
+.ad { width: 100%; height: 92vh; background: #f3f3fe; display: flex; justify-content: space-around; align-items: center; }
+</style>
+
+<div class="ad">
+	<div class="hero-form">
+		<h3>Get Free Career Guidance</h3>
+		<p>Our experts will call you to discuss your career path.</p>
+		<form>
+			<div class="form-grid">
+				<div class="form-group">
+					<label>Full Name</label>
+					<input type="text" placeholder="John Doe" name="name" required="">
+				</div>
+				<div class="form-group">
+					<label>Phone Number</label>
+					<input type="text" placeholder="+91 90000 00000" name="mobile" required="">
+				</div>
+				<div class="form-group full-width">
+					<label>Email Address</label>
+					<input type="email" placeholder="john@example.com" name="email" required="">
+				</div>
+				<div class="form-group full-width">
+				<label>Select Course</label>
+				<select class="course-select" name="course" required="">
+					<option value="">Select your course</option>
+					<option value="FullStack">Full Stack Development with Claude AI</option>
+					<option value="DataScience">Data analytics with AI & ML</option>
+					<option value="UIUX">UI/UX Design And Digital Marketing with AI</option>
+				</select>
+				</div>
+				<div class="form-group">
+					<label>Highest Qualification</label>
+					<input type="text" placeholder="B.Tech / MCA / Degree" name="education" required="">
+				</div>
+				<div class="form-group">
+					<label>City / State</label>
+					<input type="text" placeholder="City / State" name="nativeState" required="">
+				</div>
+			</div>
+			<button class="demo-btn"> GET FREE DEMO CLASS </button>
+		</form>
+	</div>
+</div>
+
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+<?php $page = 'P03'; include 'includes/header.php';?>
+<?php include ROOT_PATH . '/includes/form-enroll.php'; ?>
+
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Courses </li> </ul>
+			<h1> All Courses </h1>
+			<p>Learn Software Courses from the Expert Trainers.</p>
+			<p>Explore new and trending free online courses.</p>
+		</div>
+	</div>
+</section>
+
+<?php include ROOT_PATH . '/includes/courses.php'; ?>
+<!-- ---------- ----- PAGE - COURSES ----- ---------- -->
+<section class="section_courses">
+	<div class="container">
+		<div class="course_row_">
+			<div class="course_col_">
+				<div class="course_filters">
+					<!-- DESKTOP BUTTONS -->
+					<div class="filter_buttons">
+						<button class="courseBtn active" data-filter="all">All Courses</button>
+					<?php foreach($courses as $category => $courseList) { ?>
+						<button class="courseBtn" data-filter="<?= $category ?>"> <?= preg_replace('/(?<!^)([A-Z])/', ' $1', $category); ?> </button>
+					<?php } ?>
+					</div>
+
+					<!-- MOBILE SELECT -->
+					<div class="filter_select">
+						<select id="mobileCourseFilter">
+							<option value="all">All Courses</option>
+						<?php foreach($courses as $category => $courseList) { ?>
+							<option value="<?= $category ?>"> <?= preg_replace('/(?<!^)([A-Z])/', ' $1', $category); ?> </option>
+						<?php } ?>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="course_col_">
+				<!-- COURSE GRID -->
+				<div class="course_grid" id="courseGrid">
+					<?php displayCourses($courses); ?>
+				</div>
+				<div class="pagination" id="pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+	// FILTERS
+	const filterButtons = document.querySelectorAll(".filter_buttons button");
+	const mobileSelect = document.getElementById("mobileCourseFilter");
+
+	// COURSES
+	const cards = document.querySelectorAll(".course_card");
+
+	// PAGINATION
+	const pagination = document.getElementById("pagination");
+
+	const itemsPerPage = 9;
+
+	let currentFilter = "all";
+	let currentPage = 1;
+
+
+
+	// =========================
+	// DESKTOP BUTTON FILTER
+	// =========================
+	filterButtons.forEach(button => {
+
+		button.addEventListener("click", function () {
+
+			filterButtons.forEach(btn => btn.classList.remove("active"));
+
+			this.classList.add("active");
+
+			currentFilter = this.dataset.filter;
+
+			// SYNC MOBILE SELECT
+			if (mobileSelect) {
+				mobileSelect.value = currentFilter;
+			}
+
+			currentPage = 1;
+
+			showCourses();
+
+		});
+
+	});
+
+
+
+	// =========================
+	// MOBILE SELECT FILTER
+	// =========================
+	if (mobileSelect) {
+
+		mobileSelect.addEventListener("change", function () {
+
+			currentFilter = this.value;
+
+			// SYNC DESKTOP BUTTON
+			filterButtons.forEach(btn => {
+
+				btn.classList.remove("active");
+
+				if (btn.dataset.filter === currentFilter) {
+					btn.classList.add("active");
+				}
+
+			});
+
+			currentPage = 1;
+
+			showCourses();
+
+		});
+
+	}
+
+
+
+	// =========================
+	// SHOW COURSES
+	// =========================
+	function showCourses() {
+
+		let filteredCards = [];
+
+		cards.forEach(card => {
+
+			const category = card.dataset.category;
+
+			if (currentFilter === "all" || category === currentFilter) {
+
+				filteredCards.push(card);
+
+			}
+
+			card.style.display = "none";
+
+		});
+
+
+
+		// PAGINATION
+		const totalPages = Math.ceil(filteredCards.length / itemsPerPage);
+
+		const start = (currentPage - 1) * itemsPerPage;
+
+		const end = start + itemsPerPage;
+
+
+
+		filteredCards.slice(start, end).forEach(card => {
+
+			card.style.display = "block";
+
+		});
+
+
+
+		createPagination(totalPages);
+
+	}
+
+
+
+	// =========================
+	// CREATE PAGINATION
+	// =========================
+	function createPagination(totalPages) {
+
+		pagination.innerHTML = "";
+
+		// HIDE PAGINATION IF ONLY 1 PAGE
+		if (totalPages <= 1) {
+			return;
+		}
+
+
+
+		// PREV BUTTON
+		if (currentPage > 1) {
+
+			const prevBtn = document.createElement("button");
+
+			prevBtn.innerHTML = "«";
+
+			prevBtn.addEventListener("click", function () {
+
+				currentPage--;
+
+				showCourses();
+
+				scrollToCourses();
+
+			});
+
+			pagination.appendChild(prevBtn);
+
+		}
+
+
+
+		// PAGE NUMBERS
+		for (let i = 1; i <= totalPages; i++) {
+
+			const btn = document.createElement("button");
+
+			btn.innerText = i;
+
+			if (i === currentPage) {
+
+				btn.classList.add("active");
+
+			}
+
+
+
+			btn.addEventListener("click", function () {
+
+				currentPage = i;
+
+				showCourses();
+
+				scrollToCourses();
+
+			});
+
+
+
+			pagination.appendChild(btn);
+
+		}
+
+
+
+		// NEXT BUTTON
+		if (currentPage < totalPages) {
+
+			const nextBtn = document.createElement("button");
+
+			nextBtn.innerHTML = "»";
+
+			nextBtn.addEventListener("click", function () {
+
+				currentPage++;
+
+				showCourses();
+
+				scrollToCourses();
+
+			});
+
+			pagination.appendChild(nextBtn);
+
+		}
+
+	}
+
+
+
+	// =========================
+	// SCROLL TOP
+	// =========================
+	function scrollToCourses() {
+
+		const grid = document.getElementById("courseGrid");
+
+		if (grid) {
+
+			window.scrollTo({
+
+				top: grid.offsetTop - 100,
+
+				behavior: "smooth"
+
+			});
+
+		}
+
+	}
+
+
+
+	// INITIAL LOAD
+	showCourses();
+
+});
+
+</script>
+
+
+</body>
+</html>

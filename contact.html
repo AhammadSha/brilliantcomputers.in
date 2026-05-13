@@ -1,0 +1,105 @@
+<?php $page = 'P06'; include 'includes/header.php';?>
+<?php include ROOT_PATH . '/includes/form-contact.php'; ?>
+
+<style>
+
+.banner_course { width: 100%; position: relative; padding: 100px 16px; background: url('assets/media/bg-g1.webp')no-repeat center; }
+.course_banner { display: block; padding-bottom: 100px; }
+.course_banner ul { display: flex; align-items: center; gap: 6px; }
+.course_banner h1 { font-size: 42px; color: var(--pc); }
+.course_banner h2 { font-size: 15px; font-weight: 400; margin-top: 6px; }
+
+@media all and (max-width:480px) {
+	.banner_course { padding: 60px 16px; }
+	.course_banner { display: block; padding-bottom: 0px; }
+}
+
+@media (min-width:480px) and (max-width: 992px) {
+
+}
+</style>
+
+<section class="banner_course">
+	<div class="container">
+		<div class="course_banner">
+			<ul> <li> Home </li> <li> ❯❯ </li> <li> Contact Us </li> </ul>
+			<h1> Contact Us </h1>
+			<h2> We love to help you  </h2>
+			<h2> Explore new and trending free online courses. </h2>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- ----- Contact us ----- ---------- -->
+<section class="section_contact">
+	<div class="container">
+		<div class="contact_row">
+			<div class="contact_col">
+				<div class="contact_form">
+					<div class="subTitle"> <span>Send us email</span> </div>
+					<div class="title"> <h2>Feel free to write</h2> </div>
+					<form enctype="multipart/form-data" method="POST">
+						<div class="input_box">
+							<input type="text"  name="name" placeholder="Enter Name">
+							<input type="email" name="email" placeholder="Enter Email">
+						</div>
+						<div class="input_box">
+							<input type="number" name="phone" placeholder="Enter Phone">
+							<input type="text"   name="subject" placeholder="Enter Subject">
+						</div>
+						<div class="input_box">
+							<textarea type="text" name="message" rows="6" placeholder="Enter Message"></textarea>
+						</div>
+						<div class="input_box">
+							<button class="btn_d" type="submit" name="send"> Send Message </button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="contact_col">
+				<div class="contact_info">
+					<div class="subTitle"> Need any help? </div>
+					<div class="title"> <h2>Get in touch with us</h2> </div>
+					<div class="info_card">
+						<div class="info_icon"> <i class="fa-solid fa-phone"></i> </div>
+						<div class="info_text">
+							<h3> Have any question? </h3>
+							<a href="tel:<?php echo $phn1; ?>"> <?php echo $phn1; ?> </a>
+							<a href="tel:<?php echo $phn2; ?>"> <?php echo $phn2; ?> </a>
+						</div>
+					</div>
+					<div class="info_card">
+						<div class="info_icon"> <i class="fa-solid fa-envelope"></i> </div>
+						<div class="info_text">
+							<h3> Write email </h3>
+							<a href="mailto:<?php echo $email1; ?>"> <?php echo $email1; ?> </a>
+							<a href="mailto:<?php echo $email2; ?>"> <?php echo $email2; ?> </a>
+						</div>
+					</div>
+					<div class="info_card">
+						<div class="info_icon"> <i class="fa-solid fa-location-arrow"></i> </div>
+						<div class="info_text"> <h3> Head Office </h3> <a href="<?php echo $addUrl1; ?>"> <?php echo $address1; ?> </a> </div>
+					</div>
+					<div class="info_card">
+						<div class="info_icon"> <i class="fa-solid fa-location-arrow"></i> </div>
+						<div class="info_text"> <h3> Branch Office </h3> <a href="<?php echo $addUrl2; ?>"> <?php echo $address2; ?> </a> </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- ----- MAP ----- ---------- -->
+<section class="map">
+	<div class="map_frame">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4450.216635150388!2d80.0369353!3d15.5109492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4b01a734d09f57%3A0x2bc4e0a83e0cd232!2sBrilliant%20Computer%20Education!5e1!3m2!1sen!2sin!4v1776764863200!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+</section>
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<?php $page = 'P04'; include 'includes/header.php';?>
+
+
+<style>
+
+.banner_course { width: 100%; position: relative; padding: 100px 16px; background: url('assets/media/bg-g1.webp')no-repeat center; }
+.course_banner { display: block; padding-bottom: 100px; }
+.course_banner ul { display: flex; align-items: center; gap: 6px; }
+.course_banner h1 { font-size: 42px; color: var(--pc); }
+.course_banner h2 { font-size: 15px; font-weight: 400; margin-top: 6px; }
+
+@media all and (max-width:480px) {
+	.banner_course { padding: 60px 16px; }
+	.course_banner { display: block; padding-bottom: 0px; }
+}
+
+@media (min-width:480px) and (max-width: 992px) {
+
+}
+</style>
+
+<section class="banner_course">
+	<div class="container">
+		<div class="course_banner">
+			<ul> <li> Home </li> <li> ❯❯ </li> <li> Services </li> </ul>
+			<h1> Our Training Services </h1>
+			<h2> From Basic to Advanced...</h2>
+			<h2> We Offer Classroom, Online, Weekend, and Corporate Training on a Wide Range of Software Courses. </h2>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- ----- SERVICES ----- ---------- -->
+<section class="section_services">
+	<div class="container">
+		<div class="service__row">
+			<?php include ROOT_PATH . '/includes/services.php'; ?>
+			<?php displayservices($services, 'Services'); ?>
+		</div>
+	</div>
+</section>
+
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<?php $page = 'P02'; include 'includes/header.php';?>
+
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> About Us </li> </ul>
+			<h1> About Us </h1>
+			<p>Stay updated with computer education tips, tutorials, and career guidance.</p>
+		</div>
+	</div>
+</section>
+
+
+<style>
+
+.about__row { display: grid; grid-template-columns: repeat(2, 1fr); grid-gap: 32px; }
+.about__col { width: 100%; }
+.about__img_box { width: 100%; position: relative; padding-bottom: 60px; }
+
+.about__img { width: 60%; border-radius: 28px; overflow: hidden; border: 2px solid #fff; position: relative; }
+.about__img img { width: 100%; height: auto; }
+
+.about__img:nth-child(1) { z-index: 1; }
+.about__img:nth-child(2) { position: absolute; bottom: 128px; right: 0; width: 65%; z-index: 1; }
+.about__img:nth-child(3) { width: 400px; display: block; top: 0; left: 28%;
+	position: absolute; animation: animRotate 60s linear infinite; border: 0; }
+
+
+.about__exp_ { width: 260px; position: relative; margin-top: 60px; }
+.about__exp { display: grid; grid-template-columns: 60px 1fr; align-items: center;
+	background: #fff; padding: 16px 32px; border-radius: 50px; box-shadow: var(--bs); position: relative; z-index: 1; }
+
+.about__exp_:after { content: ''; display: block; width: 100%; height: 100%;
+	position: absolute; top: 5px; left: 5px; background: var(--pc); border-radius: 50px; }
+.about__exp_icon { width: 100%; }
+.about__exp_icon em { font-size: 42px; line-height: 1.2; color: var(--pc); font-weight: 600; }
+.about__exp_icon img { width: 100%; }
+
+.about__exp_text { margin-left: 16px; }
+.about__exp_text p { font-weight: 600; text-align: justify; }
+.about__exp_text p em { font-size: 32px; line-height: 1.2; color: var(--pc); }
+.about__exp_text p span { display: block; }
+
+
+.about__info {  }
+.about__info span { display: block; font-weight: 600; color: var(--pc); }
+.about__info h2 { font-size: 34px; }
+.about__info h2 em { display: inline-block; }
+.about__info p { margin-top: 16px; }
+
+@media all and (max-width:480px) {
+	.about__row { grid-template-columns: repeat(1, 1fr); }
+
+	.about__info h2 { font-size: 28px; }
+	.about__info h2 em { display: inline-block; }
+}
+
+@media (min-width:480px) and (max-width: 992px) {
+
+}
+
+</style>
+
+<style>
+
+
+.about__info_box { padding: 32px 24px; background: #fff; border: 1px solid var(--bg2); border-radius: 28px; margin-top: 20px; }
+.tab { display: flex; justify-content: flex-start; align-items: center; gap: 8px; overflow: hidden; margin-bottom: 24px; }
+.tab button { padding: 8px 24px; transition: 0.3s; font-size: 15px; border-radius: 50px; border: 1px solid var(--bg2); background: #fff; }
+.tab button:hover { background: var(--gn2); color: #fff; }
+.tab button.active { background: var(--gn2); color: #fff; }
+.tabcontent { display: none; }
+
+
+</style>
+
+<section class="widget_section">
+	<div class="container">
+		<div class="about__row">
+			<div class="about__col">
+				<div class="about__img_box">
+					<div class="about__img"> <img src="assets/media/about_image.jpg" alt="Brilliant Computer Education">   </div>
+					<div class="about__img"> <img src="assets/media/about_image-0.jpg" alt="Brilliant Computer Education"> </div>
+					<div class="about__img"> <img src="assets/media/why-choose-two-dot-2.png" alt="Brilliant Computer Education"> </div>
+
+
+					<div class="about__exp_">
+						<div class="about__exp">
+							<div class="about__exp_icon">  <em>31+</em> </div>
+							<div class="about__exp_text"> <p>  Years <span>of experience</span>  </p> </div>
+						</div>
+					</div>
+
+						
+				</div>
+			</div>
+			<div class="about__col">
+				<div class="about__info">
+					<span> About </span>
+					<h2>Brilliant <em>Computer Education</em> </h2>
+					<p>	Established in the Year 1995, the Brilliant Computer Education, an ISO 9001:2015 certified institute and is the only organization in and around Ongole, Prakasam District, Andhra Pradesh offers various career development courses and job oriented diplomas and targeting a well trained professional with the skills which meets growing computer industry/real time environment. Having vast experience in the field of computer training Brilliant is running from Past 31 years. It is one of the computer educational institutions with enduring Brand identity</p>
+
+					<a href="gallery"></a>
+
+					<div class="about__info_box">
+						
+						<div class="tab">
+							<button class="tablinks" onclick="openCity(event, 'Vision')" id="defaultOpen">Our Vision</button>
+							<button class="tablinks" onclick="openCity(event, 'Mission')">Our Mission</button>
+							
+						</div>
+
+						<div id="Vision" class="tabcontent">
+							<p>Our vision is put into action through programs and a focus on environmental activities to benefit society, and a commitment to build value by making Brilliant Computer Education a truly sustainable company.</p>
+						</div>
+
+						<div id="Mission" class="tabcontent">
+							<p>Our mission is to provide quality English language instruction through a variety of courses.  Brilliant Computer is the optimal choice for your needs, offering nearly three decades of industry experience coupled with faculty members boasting over 20 years of expertise, ensuring students receive instruction from seasoned professionals. Their state-of-the-art computer labs are equipped with the latest technology, facilitating hands-on learning and practical skill development. Additionally, the institution provides a content-rich curriculum that is continuously updated to reflect the latest advancements in the field, ensuring students receive relevant, comprehensive, and industry-aligned education.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<style>
+
+.about_row_ { display: flex; align-items: center; gap: 32px; }
+.about_col_ { width: 100%; }
+
+.about_img_ { width: 60%; margin: auto; background: #d5e3ff; box-shadow: var(--bs); border-radius: 12px 12px 0px 0px; }
+.about_img_ img { width: 100%; height: auto;  }
+
+.about_img_info { width: 60%; margin: auto;  background: #fff; text-align: center; padding: 12px; box-shadow: var(--bs); border-radius: 0px 0px 12px 12px; }
+.about_img_info h3 { color: var(--sc); }
+.about_img_info p b { color: var(--pc); }
+.about_img_info p { font-weight: 500; }
+
+.about_info_ {  }
+.about_info_ h3 { font-size: 24px; font-family: var(--fs); color: var(--pc); }
+.about_info_ p { margin-top: 16px; }
+
+@media all and (max-width:480px) {
+	.about_row_ { flex-direction: column; }
+	.about_img_ { width: 100%; }
+	.about_img_info { width: 100%; }
+
+	.about_row_:last-child { margin-top: 32px; flex-direction: column-reverse; }
+}
+
+@media (min-width:480px) and (max-width: 992px) {
+
+}
+
+</style>
+
+
+<section class="widget_section bg1">
+	<div class="container">
+		<div class="">
+			<div class="about_row_">
+				<div class="about_col_">
+					<div class="about_img_"> <img src="assets/media/nyamathulla-founder.png" alt="Brilliant Computer Education"> </div>
+					<div class="about_img_info">
+						<h3> Dr. Sk. Nyamathulla Basha </h3>
+						<p> <b>Founder & Chairman</b> </p>
+						<p> Brilliant Group of Institutions </p>
+					</div>
+				</div>
+				<div class="about_col_">
+					<div class="about_info_">
+						<h3> About Founder </h3>
+						<p> “The founder of Brilliant Group of Institutions is Dr. Sri. Sk. Nyamathulla Basha and it was founded in 1995. His visionary goal of starting an institution that can quench the market demands of IT skills is inspired by his selfless attitude towards serving the community and the aphoristic thoughts of Indira Gandhi, Education is a liberating force, and in our age it is also a democratizing force, cutting cross the barriers of caste and class, smoothening out inequalities imposed by birth and other circumstances”. </p>
+					</div>
+				</div>
+			</div>
+
+			<div class="about_row_">
+				<div class="about_col_">
+					<div class="about_info_">
+						<h3> About Managing Director </h3>
+						<p> The Managing Director Dr. Sk. Tahura, to contribute effectively to the important national endeavour to produce quality human resource in the information technology to the country’s IT industry needs. </p>
+					</div>
+				</div>
+				<div class="about_col_">
+					<div class="about_img_"> <img src="assets/media/tahura-managing-director.png" alt="Brilliant Computer Education"> </div>
+					<div class="about_img_info">
+						<h3> Dr. Sk. Tahura </h3>
+						<p> <b>Managing Director</b> </p>
+						<p> Brilliant Group of Institutions </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<style>
+
+.timeline{ position:relative; margin:50px auto; padding:40px 0; width:1000px; box-sizing:border-box; }
+.timeline:before{ content:''; position:absolute; left:50%; width:2px; height:100%; background:#c5c5c5; }
+.timeline ul{ padding:0; margin:0; }
+.timeline ul li { list-style:none; position:relative; width:50%; padding:20px 40px; box-sizing:border-box; }
+.timeline ul li:nth-child(odd) { float:left; text-align:right; clear:both; }
+.timeline ul li:nth-child(even) { float:right; text-align:left; clear:both; }
+.content{ padding-bottom:20px; }
+.timeline ul li:nth-child(odd):before { content:''; position:absolute; width:10px; height:10px; top:24px; right:-6px; background: var(--pc); border-radius:50%; box-shadow:0 0 0 3px rgba(63,101,176,0.3);
+}
+.timeline ul li:nth-child(even):before { content:''; position:absolute; width:10px; height:10px; top:24px; left:-4px; background:var(--pc); border-radius:50%; box-shadow:0 0 0 3px rgba(63,101,176,0.3);
+}
+.timeline ul li h3{ padding:0; margin:0; color:var(--pc); font-weight:600;
+}
+.timeline ul li p{ margin:10px 0 0; padding:0;
+}
+.timeline ul li .time h4{ margin:0; padding:0; font-size:14px;
+}
+.timeline ul li:nth-child(odd) .time
+{ position:absolute; top:12px; right:-120px; margin:0; padding:8px 24px; background: var(--pc); color:#fff; border-radius:18px; box-shadow:0 0 0 3px rgba(63,101,176,0.3);
+}
+.timeline ul li:nth-child(even) .time
+{ position:absolute; top:12px; left:-120px; margin:0; padding:8px 24px; background:var(--pc); color:#fff; border-radius:18px; box-shadow:0 0 0 3px rgba(63,101,176,0.3);
+}
+
+@media all and (max-width:480px) {
+  .timeline{
+    width:100%;
+    padding-bottom:0;
+  }
+  h1{
+    font-size:40px;
+    text-align:center;
+  }
+  .timeline:before{
+    left:20px;
+    height:100%;
+  }
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even)
+  {
+    width:100%;
+    text-align:left;
+    padding-left:50px;
+    padding-bottom:50px;
+  }
+  .timeline ul li:nth-child(odd):before,
+  .timeline ul li:nth-child(even):before
+  {
+    top:-18px;
+    left:16px;
+  }
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time{
+    top:-30px;
+    left:50px;
+    right:inherit;
+  }
+}
+
+@media all and (max-width:480px) {
+	
+}
+
+@media (min-width:480px) and (max-width: 992px) {
+
+}
+
+.bg1 { background: var(--bg1); }
+</style>
+<!--
+<section class="widget_section bg1">
+	<div class="container">
+		<div class="sectionHead">
+			<h2>Our journey</h2>
+			<p> All cards must be the same height and width for space calculations on large screens. </p>
+		</div>
+
+		<div class="timeline">
+			<ul>
+				<li>
+					<div class="content">
+						<h3>A Humble Beginning…</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+					</div>
+					<div class="time"> <h4>1995</h4> </div>
+				</li>
+
+				<li>
+					<div class="content">
+						<h3>15+ Years of Training Academic Students…</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+					</div>
+					<div class="time"> <h4>2010</h4> </div>
+				</li>
+
+				<li>
+					<div class="content">
+						<h3>15+ Years of Training the Corporates...</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+					</div>
+					<div class="time"> <h4>2010</h4> </div>
+				</li>
+				<li>
+					<div class="content">
+						<h3>Our Infrastructure</h3>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+					</div>
+					<div class="time"> <h4>2018</h4> </div>
+				</li>
+				<div style="clear:both;"></div>
+			</ul>
+		</div>
+	</div>
+</section>
+-->
+
+
+<!-- ---------- ----- Why Choose Us ----- ---------- -->
+<section class="widget_section">
+	<div class="container">
+		<?php include ROOT_PATH . '/includes/why-choose-us.php'; ?>
+	</div>
+</section>
+
+
+<?php include 'includes/footer.php';?>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<?php $page = 'P07'; include 'includes/header.php';?>
+
+<?php include 'includes/gallery.php'; ?>
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Gallery </li> </ul>
+			<h1> Gallery </h1>
+			<p>An Educational Mega Fair helps students explore colleges, courses, scholarships, and career options. With expert guidance and interactive stalls, it gives clarity and confidence to plan a successful future.</p>
+		</div>
+	</div>
+</section>
+
+<!-- Photos -->
+<div class="gallerySlider">
+	<div class="container">
+		<div class="gallery_title">
+			<div class="titleG"> <h2>Photos</h2> </div>
+			<div class="buttonsG">
+				<button class="galleryBtn prev">&#10094;</button>
+				<button class="galleryBtn next">&#10095;</button>
+			</div>
+		</div>
+		<div class="galleryTrack">
+			<?php displayGallery($gallery, 'Photos'); ?>
+		</div>
+	</div>
+</div>
+
+<!-- Awards -->
+<div class="gallerySlider">
+	<div class="container">
+		<div class="gallery_title">
+			<div class="titleG"> <h2>Awards</h2> </div>
+			<div class="buttonsG">
+				<button class="galleryBtn prev">&#10094;</button>
+				<button class="galleryBtn next">&#10095;</button>
+			</div>
+		</div>
+		<div class="galleryTrack">
+			<?php displayGallery($gallery, 'Awards'); ?>
+		</div>
+	</div>
+</div>
+
+<!-- Education Fair -->
+<div class="gallerySlider">
+	<div class="container">
+		<div class="gallery_title">
+			<div class="titleG"> <h2>Education Fair</h2> </div>
+			<div class="buttonsG">
+				<button class="galleryBtn prev">&#10094;</button>
+				<button class="galleryBtn next">&#10095;</button>
+			</div>
+		</div>
+		<div class="galleryTrack">
+			<?php displayGallery($gallery, 'EducationFair'); ?>
+		</div>
+	</div>
+</div>
+
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+<script>
+document.querySelectorAll('.gallerySlider').forEach(slider => {
+
+	const track = slider.querySelector('.galleryTrack');
+	const next  = slider.querySelector('.next');
+	const prev  = slider.querySelector('.prev');
+
+	const cardWidth = () => { return track.querySelector('.galleryCard').offsetWidth + 16; };
+
+	// NEXT BUTTON
+	next.addEventListener('click', () => { moveNext(); });
+
+	// PREV BUTTON
+	prev.addEventListener('click', () => {
+		if (track.scrollLeft <= 0) {
+			track.scrollTo({
+				left: track.scrollWidth,
+				behavior: 'smooth'
+			});
+		} else {
+			track.scrollBy({
+				left: -cardWidth(),
+				behavior: 'smooth'
+			});
+		}
+	});
+
+	// AUTO MOVE
+	function moveNext() {
+		track.scrollBy({
+			left: cardWidth(),
+			behavior: 'smooth'
+		});
+		// Infinite Loop
+		setTimeout(() => {
+			if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
+				track.scrollTo({
+					left: 0,
+					behavior: 'smooth'
+				});
+			}
+		}, 1000);
+	}
+	// AUTO SLIDE EVERY 3 SEC
+	let autoSlide = setInterval(moveNext, 3000);
+	// STOP ON HOVER
+	slider.addEventListener('mouseenter', () => { clearInterval(autoSlide); });
+	// START AGAIN
+	slider.addEventListener('mouseleave', () => { autoSlide = setInterval(moveNext, 3000); });
+
+});
+</script>
