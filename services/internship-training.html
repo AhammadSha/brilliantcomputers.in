@@ -1,0 +1,100 @@
+<?php $page = 'P04'; $SP = 'SP04'; include '../includes/header.php';?>
+
+
+<?php include ROOT_PATH . '/includes/services.php'; $SERVICE = $services[3]; ?>
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Services </li> </ul>
+			<h1> <?= $SERVICE['title'] ?>    </h1>
+			<p>  <?= $SERVICE['subtitle'] ?> </p>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- -----  ----- ---------- -->
+<section class="widget_section visible">
+	<div class="container">
+		<div class="service_row_">
+			<div class="service_col_">
+
+				<article class="service_article">
+					<div class="service_image"> <img src="<?= $SERVICE['image'] ?>" alt="<?= $SERVICE['title'] ?> | Brilliant Computer Education"> </div>
+
+					<h1>Internship Training in Ongole</h1>
+					<p> &emsp;&emsp; Brilliant Computers in Ongole City offers structured internship training programs for college students to gain real-world industry experience. Our internship training focuses on practical learning, live projects, and hands-on exposure to current technologies such as programming, web development, data analytics, and office tools. </p>
+
+					<hr class="hr">
+
+					<h2>Why Choose Our Internship Training?</h2>
+					<ul>
+						<li> Real-Time Project Experience</li>
+						<li> Industry-Oriented Training Programs</li>
+						<li> Guidance from Experienced Mentors</li>
+						<li> Hands-On Practical Learning</li>
+						<li> Exposure to Latest Technologies</li>
+						<li> Career-Focused Training Approach</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Technologies Covered</h2>
+					<ul>
+						<li>Programming Languages (C, C++, Java, Python)</li>
+						<li>Web Development (HTML, CSS, JavaScript, PHP)</li>
+						<li>Data Analytics (Excel, Power BI, Tableau)</li>
+						<li>Office Tools (MS Office, Advanced Excel)</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Our Training Methodology</h2>
+					<ol>
+						<li>Concept Learning & Fundamentals</li>
+						<li>Hands-On Practice Sessions</li>
+						<li>Live Project Development</li>
+						<li>Assignments & Tasks</li>
+						<li>Mentor Guidance & Reviews</li>
+						<li>Final Project Submission</li>
+					</ol>
+
+					<hr class="hr">
+
+					<h2>Benefits for Students</h2>
+					<ul>
+						<li>Improved Technical Skills</li>
+						<li>Better Problem-Solving Abilities</li>
+						<li>Strong Resume Building</li>
+						<li>Increased Job Opportunities</li>
+						<li>Industry Exposure & Confidence</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Build Your Career with Internship Training</h2>
+					<p> &emsp;&emsp; Students work under the guidance of experienced mentors who help bridge the gap between academic knowledge and industry requirements. Through interactive sessions, assignments, and project-based learning, interns develop technical skills, problem-solving abilities, and professional confidence. </p>
+					<p> Internship training at Brilliant Computers enhances employability, strengthens resumes, and prepares students to meet real-time industry challenges with confidence and practical expertise. </p>
+
+					<hr class="hr">
+
+					<h2>Apply for Internship</h2>
+					<p>Kickstart your career with real-world experience.</p>
+					<a href="#">Apply Now</a>
+
+				</article>
+			</div>
+
+			<div class="service_col_">
+				<?php include ROOT_PATH . '/includes/sticky-form.php'; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+
+</body>
+</html>

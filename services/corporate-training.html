@@ -1,0 +1,101 @@
+<?php $page = 'P04'; $SP = 'SP03'; include '../includes/header.php';?>
+
+
+<?php include ROOT_PATH . '/includes/services.php'; $SERVICE = $services[2]; ?>
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Services </li> </ul>
+			<h1> <?= $SERVICE['title'] ?>    </h1>
+			<p>  <?= $SERVICE['subtitle'] ?> </p>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- -----  ----- ---------- -->
+<section class="widget_section visible">
+	<div class="container">
+		<div class="service_row_">
+			<div class="service_col_">
+
+				<article class="service_article">
+					<div class="service_image"> <img src="<?= $SERVICE['image'] ?>" alt="<?= $SERVICE['title'] ?> | Brilliant Computer Education"> </div>
+
+					<h1>Corporate Training in Ongole</h1>
+					<p> &emsp;&emsp; Brilliant Computers in Ongole City offers professional corporate training programs designed to upskill employees and improve organizational productivity. Our corporate training focuses on practical, industry-relevant technologies, including programming, data analytics, office tools, web technologies, and cybersecurity. </p>
+
+					<hr class="hr">
+
+					<h2>Why Choose Our Corporate Training?</h2>
+					<ul>
+						<li> Industry-Relevant Training Programs</li>
+						<li> Experienced Trainers with Real-World Expertise</li>
+						<li> Customized Training as per Company Needs</li>
+						<li> Practical & Hands-On Learning Approach</li>
+						<li> Flexible Schedules for Employees</li>
+						<li> Affordable and Effective Training Solutions</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Training Areas We Cover</h2>
+					<ul>
+						<li>Programming Languages (Java, Python, C, etc.)</li>
+						<li>Data Analytics (Excel, Power BI, Tableau)</li>
+						<li>Office Tools (MS Office, Advanced Excel)</li>
+						<li>Web Technologies (HTML, CSS, JavaScript, PHP)</li>
+						<li>Cybersecurity Basics & Advanced Concepts</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Our Training Methodology</h2>
+					<ol>
+						<li>Requirement Analysis with Organization</li>
+						<li>Customized Course Planning</li>
+						<li>Interactive Training Sessions</li>
+						<li>Hands-On Practical Exercises</li>
+						<li>Real-Time Case Studies</li>
+						<li>Performance Evaluation & Feedback</li>
+					</ol>
+
+					<hr class="hr">
+
+					<h2>Benefits for Organizations</h2>
+					<ul>
+						<li> Improved Employee Productivity</li>
+						<li> Enhanced Technical Skills</li>
+						<li> Better Team Performance</li>
+						<li> Faster Adoption of New Technologies</li>
+						<li> Competitive Advantage in Market</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Build a Skilled Workforce</h2>
+					<p> &emsp;&emsp; Through hands-on training, interactive discussions, and real-time case studies, employees gain confidence and updated technical skills. Flexible schedules, modern infrastructure, and a structured curriculum make learning effective and convenient. </p>
+					<p> Corporate training at Brilliant Computers helps organizations build skilled teams, enhance performance, and stay competitive in today’s fast-evolving digital environment. </p>
+
+					<hr class="hr">
+
+					<h2>Get Started Today</h2>
+					<p>Empower your team with the latest skills and technologies.</p>
+					<a href="#">Contact for Corporate Training</a>
+
+				</article>
+			</div>
+
+			<div class="service_col_">
+				<?php include ROOT_PATH . '/includes/sticky-form.php'; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+
+</body>
+</html>

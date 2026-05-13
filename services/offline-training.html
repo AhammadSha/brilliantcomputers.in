@@ -1,0 +1,109 @@
+<?php $page = 'P04'; $SP = 'SP01'; include '../includes/header.php';?>
+
+
+<?php include ROOT_PATH . '/includes/services.php'; $SERVICE = $services[0]; ?>
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Services </li> </ul>
+			<h1> <?= $SERVICE['title'] ?>    </h1>
+			<p>  <?= $SERVICE['subtitle'] ?> </p>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- -----  ----- ---------- -->
+<section class="widget_section visible">
+	<div class="container">
+		<div class="service_row_">
+			<div class="service_col_">
+
+				<article class="service_article">
+					<div class="service_image"> <img src="<?= $SERVICE['image'] ?>" alt="<?= $SERVICE['title'] ?> | Brilliant Computer Education"> </div>
+
+					<h2> Offline Computer Training in Ongole </h2> 
+					<p>  &emsp;&emsp; Join offline computer courses at Brilliant Computers, Ongole, and build a strong foundation in computer skills with expert guidance. Our classroom-based training focuses on practical learning, real-time examples, and personal attention to every student. </p>
+
+
+
+					<hr class="hr">
+
+					<h3>Why Choose Our Offline Training?</h3>
+					<p> &emsp;&emsp; Our offline training programs are designed to help you learn faster and more effectively through direct interaction and hands-on experience. </p>
+					<ul>
+						<li> <b>Practical Learning Approach –</b> Learn by doing with real-time examples and live projects </li>
+						<li> <b>Expert Faculty –</b> Get trained by experienced instructors with industry knowledge </li>
+						<li> <b>Personal Attention –</b> Small batch sizes ensure individual support </li>
+						<li> <b>Modern Computer Labs –</b> Well-equipped systems for better learning experience </li>
+						<li> <b>Structured Curriculum –</b> Courses designed from beginner to advanced levels </li>
+						<li> <b>Career-Oriented Training –</b> Build skills that match industry requirements </li>
+					</ul>
+
+					<hr class="hr">
+
+					<h3>Who Can Join?</h3>
+					<p>  &emsp;&emsp; Our offline training is suitable for: </p>
+					<ul>
+						<li> Students (School / College) </li>
+						<li> Job Seekers </li>
+						<li> Working Professionals </li>
+						<li> Beginners with no prior knowledge </li>
+					</ul>
+
+					<hr class="hr">
+
+					<h3> Our Training Methodology </h3>
+					<p>  &emsp;&emsp; We follow a step-by-step classroom training approach that ensures better understanding and skill development: </p>
+					<ol>
+						<li> Concept Explanation </li>
+						<li> Real-Time Examples </li>
+						<li> Hands-On Practice </li>
+						<li> Assignments & Exercises </li>
+						<li> Doubt Clarification </li>
+						<li> Practical Implementation </li>
+					</ol>
+					<p> This structured approach helps students gain confidence and apply their knowledge in real-world scenarios. </p>
+
+					<hr class="hr">
+
+					<h3> Benefits of Offline Training </h3>
+					<ul>
+						<li> Direct interaction with trainers </li>
+						<li> Better understanding of concepts </li>
+						<li> Immediate doubt clarification </li>
+						<li> Hands-on practical experience </li>
+						<li> Improved confidence and communication </li>
+						<li> Industry-ready skills </li>
+					</ul>
+					<p> Offline classroom training helps learners grasp concepts more clearly compared to self-learning or online-only methods. </p>
+
+					<hr class="hr">
+
+					<h3> Build Your Career with Brilliant Computers </h3>
+					<p>  &emsp;&emsp; With experienced faculty, modern infrastructure, and a supportive learning environment, Brilliant Computers helps you gain valuable technical knowledge and improve your career opportunities. </p>
+					<p>  Whether you are starting from basics or upgrading your skills, our offline training programs are designed to make you job-ready and confident. </p>
+
+					<hr class="hr">
+
+					<h3> Enroll Today </h3>
+					<p> Take the first step towards your successful career. </p>
+					<p> 👉 Join Offline Computer Training at Brilliant Computers, Ongole and transform your future with practical skills. </p>
+
+				</article>
+			</div>
+
+			<div class="service_col_">
+				<?php include ROOT_PATH . '/includes/sticky-form.php'; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+
+</body>
+</html>

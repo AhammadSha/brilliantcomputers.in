@@ -1,0 +1,102 @@
+<?php $page = 'P04'; $SP = 'SP06'; include '../includes/header.php';?>
+
+
+<?php include ROOT_PATH . '/includes/services.php'; $SERVICE = $services[5]; ?>
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Services </li> </ul>
+			<h1> <?= $SERVICE['title'] ?>    </h1>
+			<p>  <?= $SERVICE['subtitle'] ?> </p>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- -----  ----- ---------- -->
+<section class="widget_section visible">
+	<div class="container">
+		<div class="service_row_">
+			<div class="service_col_">
+
+				<article class="service_article">
+					<div class="service_image"> <img src="<?= $SERVICE['image'] ?>" alt="<?= $SERVICE['title'] ?> | Brilliant Computer Education"> </div>
+					
+					<h1>100% Job Guarantee Training in Ongole</h1>
+					<p> &emsp;&emsp; Brilliant Computers in Ongole City offers 100% job guarantee training programs designed to prepare students for successful careers. Our courses focus on practical skills, real-time projects, and industry-oriented curriculum aligned with current job requirements. </p>
+
+					<hr class="hr">
+
+					<h2>Why Choose Our Job Guarantee Training?</h2>
+					<ul>
+						<li> Industry-Oriented Curriculum</li>
+						<li> Real-Time Project Experience</li>
+						<li> Hands-On Practical Training</li>
+						<li> Experienced Trainers & Mentors</li>
+						<li> Personalized Learning Approach</li>
+						<li> 100% Placement Assistance</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>What We Provide</h2>
+					<ul>
+						<li> Resume Building & Profile Optimization</li>
+						<li> Interview Preparation & Mock Interviews</li>
+						<li> Skill Assessments & Performance Tracking</li>
+						<li> Placement Support & Job Assistance</li>
+						<li> Career Guidance & Mentorship</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Our Training Methodology</h2>
+					<ol>
+						<li>Concept-Based Learning</li>
+						<li>Hands-On Practice & Assignments</li>
+						<li>Live Project Implementation</li>
+						<li>Regular Skill Assessments</li>
+						<li>Interview Preparation Sessions</li>
+						<li>Placement Support & Follow-Up</li>
+					</ol>
+
+					<hr class="hr">
+
+					<h2>Benefits for Students</h2>
+					<ul>
+						<li> Improved Technical Skills</li>
+						<li> Strong Problem-Solving Abilities</li>
+						<li> Better Job Opportunities</li>
+						<li> Increased Confidence</li>
+						<li> Career Growth & Stability</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Build Your Career with Confidence</h2>
+					<p> &emsp;&emsp; We provide continuous support, skill assessments, and placement assistance to help learners secure suitable job opportunities. With personalized training, modern infrastructure, and a career-focused approach, Brilliant Computers ensures students gain confidence, technical expertise, and workplace readiness. </p>
+					<p> Our 100% job guarantee training empowers students to achieve professional growth and build a strong future in today’s competitive job market. </p>
+
+					<hr class="hr">
+
+					<h2>Start Your Career Today</h2>
+					<p>Join our job guarantee training and secure your future.</p>
+					<a href="#">Enroll Now</a>
+
+				</article>
+			</div>
+
+			<div class="service_col_">
+				<?php include ROOT_PATH . '/includes/sticky-form.php'; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+
+</body>
+</html>

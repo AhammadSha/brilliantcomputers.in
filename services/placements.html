@@ -1,0 +1,81 @@
+<?php $page = 'P04'; $SP = 'SP08'; include '../includes/header.php';?>
+
+
+<?php include ROOT_PATH . '/includes/services.php'; $SERVICE = $services[7]; ?>
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Services </li> </ul>
+			<h1> <?= $SERVICE['title'] ?>    </h1>
+			<p>  <?= $SERVICE['subtitle'] ?> </p>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- -----  ----- ---------- -->
+<section class="widget_section visible">
+	<div class="container">
+		<div class="service_row_">
+			<div class="service_col_">
+
+				<article class="service_article">
+					<div class="service_image"> <img src="<?= $SERVICE['image'] ?>" alt="<?= $SERVICE['title'] ?> | Brilliant Computer Education"> </div>
+
+					<h1>Welcome to Brilliant Computers Placement Cell</h1>
+					<p> &emsp;&emsp; At Brilliant Computers, we understand that the ultimate goal of education is to secure a rewarding career. That’s why we have a dedicated Placement Cell committed to helping our students transition seamlessly from the classroom to the workplace. Since our establishment in 1995, we have been at the forefront of providing comprehensive training in software, multimedia, and accounting packages, ensuring our students are equipped with the skills needed to excel in today’s dynamic job market. </p>
+
+					<hr class="hr">
+
+					<h2> Our Placement Services </h2>
+					<p> &emsp;&emsp; Our Placement Cell offers personalized career guidance sessions to understand each student’s aspirations, strengths, and career objectives. We provide valuable insights into various industries and job roles, helping students make informed career decisions. </p>
+
+					<hr class="hr">
+					
+					<h2> Industry Connections </h2>
+					<p> &emsp;&emsp; Over the years, Brilliant Computers has built strong relationships with leading companies across various sectors. Through our extensive network, we facilitate direct interactions between students and industry professionals, providing invaluable exposure and networking opportunities. </p>
+
+					<hr class="hr">
+
+					<h2> Skill Enhancement Workshops </h2>
+					<p> &emsp;&emsp; In addition to technical training, we conduct skill enhancement workshops to groom students for professional success. These workshops cover essential topics such as resume writing, interview preparation, communication skills, and corporate etiquette. </p>
+
+					<hr class="hr">
+
+					<h2> Placement Assistance </h2>
+					<p> &emsp;&emsp; Our Placement Cell works tirelessly to connect students with employment opportunities that align with their skills and interests. From organizing campus recruitment drives to coordinating off-campus interviews, we ensure that every student receives the support they need to kickstart their career journey. </p>
+
+					<hr class="hr">
+
+					<h2> Alumni Network </h2>
+					<p> &emsp;&emsp; Our alumni form an integral part of the Brilliant Computers community. Through our robust alumni network, current students benefit from mentorship, industry insights, and job referrals, fostering a culture of continuous learning and growth. </p>
+
+					<hr class="hr">
+
+					<h2> Our Success Stories </h2>
+					<p> &emsp;&emsp; The success of our Placement Cell is reflected in the achievements of our alumni, who have secured prestigious positions in top companies worldwide. Whether it’s landing their dream job, starting their own ventures, or pursuing advanced studies, our alumni continue to make us proud with their accomplishments. </p>
+					<p> <b> Multi Job Opportunities… </b> </p>
+
+					<hr class="hr">
+
+					<h2> Get in Touch </h2>
+					<p> &emsp;&emsp; For inquiries related to placements or to collaborate with our Placement Cell, please contact us at below give Form. We look forward to supporting you in achieving your career goals! </p>
+					<p> Talk to Our Mentor about Your Future IT Career : +91 8179099699 </p>
+
+				</article>
+			</div>
+
+			<div class="service_col_">
+				<?php include ROOT_PATH . '/includes/sticky-form.php'; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+
+</body>
+</html>

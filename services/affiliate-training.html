@@ -1,0 +1,66 @@
+<?php $page = 'P04'; $SP = 'SP07'; include '../includes/header.php';?>
+
+
+<?php include ROOT_PATH . '/includes/services.php'; $SERVICE = $services[6]; ?>
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Services </li> </ul>
+			<h1> <?= $SERVICE['title'] ?>    </h1>
+			<p>  <?= $SERVICE['subtitle'] ?> </p>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- -----  ----- ---------- -->
+<section class="widget_section visible">
+	<div class="container">
+		<div class="service_row_">
+			<div class="service_col_">
+
+				<article class="service_article">
+					<div class="service_image"> <img src="<?= $SERVICE['image'] ?>" alt="<?= $SERVICE['title'] ?> | Brilliant Computer Education"> </div>
+
+					<h1>Affiliate Training in ongole</h1>
+					<p> &emsp;&emsp; Brilliant Computer Education Offering the Courses Affiliated To </p>
+
+					<hr class="hr">
+
+					<h2> AP STATE BOARD OF TECHNICAL EDUCATION AND TRAINING (SBTET), GOVT.OF A.P. </h2>
+					<p> &emsp;&emsp; The Director of Public Instruction (D.P.I.) used to head the Technical Education also at the time of formation of Andhra Pradesh. To help speed up the process of development of Technical Education, a Board in the name and style of “STATE BOARD OF TECHNICAL EDUCATION AND TRAINING” was created vide G.O.Ms.No.371 Edn-dated 26.2.1957. The Joint Director (Technical Education) of DPI used to act as secretary of this newly formed Board. The Board is formed as a statutory body under the A.P. Education Act-1982 (act 1 of 1982), an act of assembly, in the present form, vide G.O.Ms.No.140 dated 24.4.1984. </p>
+
+					<hr class="hr">
+
+					<h2> AP STATE INSTITUTE OF VOCATIONAL EDUCATION (SIVE), GOVT.OF AP. </h2>
+					<p> &emsp;&emsp; About 85% of the educated unemployed in the live registers of employment exchanges are from the secondary and higher secondary level passed and failed youth. For a majority of the occupations, University degrees are not necessary and these jobs could be completely performed by trained higher secondary students. The greatest threat to the society by the rapid technological changes that have taken place during the recent years is the displacement of labour by the technology. </p>
+
+					<hr class="hr">
+
+					<h2> NASSCOM IT-ITES SECTOR SKILLS COUNCIL CERTIFIED PROGRAMS. </h2>
+					<p> &emsp;&emsp; National Association of Software and Service Companies (NASSCOM) is the industry association for the IT-BPM sector in India. A not-for-profit organisation funded by the industry, its objective is to build a growth-led, sustainable, technology and business services segment in the country. </p>
+
+					<p> &emsp;&emsp; Established in 1988, NASSCOM’s membership has grown over the last 25 years and currently stands at over 1400. The member organizations represent 95 per cent of industry revenues and have enabled the association to spearhead initiatives and programmes to strengthen the sector in the country and globally. NASSCOM members are active participants in the new global economy and are admired for their innovative business practices, social initiatives and thrust on emerging opportunities. NASSCOM is headquartered in New Delhi, India, and has offices in seven other cities Bengaluru, Chennai, Hyderabad, Kolkata, Mumbai. </p>
+
+					<hr class="hr">
+
+					<h2> VOCATIONAL TRAINING PARTNER (VTP), GOVT.OF INDIA. </h2>
+					<p> &emsp;&emsp; The training under SDI scheme will be provided by various VTPs under Central Government, State Governments, Public and Private Sector and Industrial establishments. VTPs will provide counselling & vocational guidance, training facilities as per norms, impart good quality training, post training support to trainees in getting employment, maintain data base on trainees trained and the outcome of the training. They will track the trainees for three years or till they get gainfully employed. VTP will also be required to have close networking with the industry for immediate placement of the trainees. They will also maintain accounts, ensure proper utilisation of funds and submit reports and utilisation certificates as per prescribed schedule. </p>
+
+					<p> &emsp;&emsp; They will follow various instructions issued by the committees or any other authority from time to time. All VTPs should have necessary powers to collect the training fee from trainees. They should utilise fee collected and funds received from DGET for meeting various expenses for imparting training and providing post training support services. They should also have powers to reimburse training fee to successful trainees out offunds received from DGET. All VTPs must have a broad band internet connection. </p>
+
+				</article>
+			</div>
+
+			<div class="service_col_">
+				<?php include ROOT_PATH . '/includes/sticky-form.php'; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+</body>
+</html>

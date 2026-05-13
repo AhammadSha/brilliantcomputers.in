@@ -1,0 +1,110 @@
+<?php $page = 'P04'; $SP = 'SP02'; include '../includes/header.php';?>
+
+
+<?php include ROOT_PATH . '/includes/services.php'; $SERVICE = $services[1]; ?>
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Services </li> </ul>
+			<h1> <?= $SERVICE['title'] ?>    </h1>
+			<p>  <?= $SERVICE['subtitle'] ?> </p>
+		</div>
+	</div>
+</section>
+
+
+<!-- ---------- -----  ----- ---------- -->
+<section class="widget_section visible">
+	<div class="container">
+		<div class="service_row_">
+			<div class="service_col_">
+
+				<article class="service_article">
+					<div class="service_image"> <img src="<?= $SERVICE['image'] ?>" alt="<?= $SERVICE['title'] ?> | Brilliant Computer Education"> </div>
+
+					<h1>Online Computer Training in Ongole</h1>
+					<p> &emsp;&emsp; Brilliant Computer Education in Ongole city offers flexible and effective online computer classes for students, job seekers, and working professionals. Our virtual training programs combine live instructor-led sessions, practical demonstrations, and real-time doubt clarification. </p>
+
+					<hr class="hr">
+
+					<h2>Why Choose Our Online Training?</h2>
+					<ul>
+						<li> <b>Live Instructor-Led Classes –</b> Learn directly from experienced trainers </li>
+						<li> <b>Flexible Learning –</b> Attend classes from home at your convenience </li>
+						<li> <b>Real-Time Doubt Clarification –</b> Get instant answers during sessions </li>
+						<li> <b>Practical Demonstrations –</b> Understand concepts with live examples </li>
+						<li> <b>Structured Curriculum –</b> Courses from basics to advanced levels </li>
+						<li> <b>Affordable Fees –</b> Quality training at budget-friendly pricing </li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Who Can Join?</h2>
+					<ul>
+						<li>Students (School / College)</li>
+						<li>Job Seekers</li>
+						<li>Working Professionals</li>
+						<li>Beginners and career switchers</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Our Online Training Methodology</h2>
+					<ol>
+						<li>Live Interactive Sessions</li>
+						<li>Concept Explanation with Examples</li>
+						<li>Practical Assignments & Projects</li>
+						<li>Screen Sharing Demonstrations</li>
+						<li>Regular Practice & Assessments</li>
+						<li>Continuous Support & Guidance</li>
+					</ol>
+
+					<hr class="hr">
+
+					<h2>Benefits of Online Training</h2>
+					<ul>
+						<li> Learn from anywhere, anytime</li>
+						<li> Saves travel time and cost</li>
+						<li> Access to recorded sessions (if provided)</li>
+						<li> Easy understanding with guided learning</li>
+						<li> Skill improvement through real-time practice</li>
+						<li> Job-oriented training approach</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Build Your Career with Online Learning</h2>
+					<p> &emsp;&emsp; Learners can study from home while gaining hands-on experience through guided assignments and projects. With experienced trainers, a structured curriculum, and continuous support, students develop confidence and job-ready skills. </p>
+					<p> Online classes at Brilliant Computer Education provide convenience, quality learning, and career-focused training for today’s digital world. </p>
+
+					<hr class="hr">
+
+					<h2>Certification & Career Support</h2>
+					<ul>
+						<li> Recognized Course Certification</li>
+						<li> Career Guidance & Skill Development</li>
+						<li> Industry-relevant training programs</li>
+					</ul>
+
+					<hr class="hr">
+
+					<h2>Enroll Today</h2>
+					<p>Start learning from the comfort of your home.</p>
+					<a href="">Join Online Training</a>
+				</article>
+			</div>
+
+			<div class="service_col_">
+				<?php include ROOT_PATH . '/includes/sticky-form.php'; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+
+</body>
+</html>
