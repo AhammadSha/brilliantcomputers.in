@@ -1,0 +1,47 @@
+<?php
+$meta_title = "";
+$meta_description = "";
+$page = 'P03'; $CP = 'CP01'; include '../includes/header.php';
+?>
+
+<!-- ---------- ----- Page Banner ----- ---------- -->
+<section class="page_banner">
+	<div class="container">
+		<div class="page_banner_info">
+			<ul> <li> <b>Home</b> </li> <li> ❯❯ </li> <li> Courses </li> </ul>
+			<h1 class="g_text"> Full Stack Courses </h1>
+			<p>  </p>
+		</div>
+	</div>
+</section>
+
+<!-- ---------- ----- Course Page ----- ---------- -->
+<section class="widget_section visible">
+	<div class="container">
+		<div class="course__row">
+			<div class="course__col">
+				<article class="course_article">
+					<section class="course_data" id="courses">
+						<h2> Courses </h2>
+						<div class="course__row_">
+							<?php include ROOT_PATH . '/includes/courses.php'; ?>
+							<?php displayCourses($courses, 'FullStack'); ?>
+						</div>
+					</section>
+					<section class="course_data" id="features">
+						<h2> Training Features </h2>
+						<?php include ROOT_PATH . '/includes/training_features.php'; ?>
+					</section>
+				</article>
+			</div>
+			<div class="course__col">
+				<?php include ROOT_PATH . '/includes/sticky-form.php'; ?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php include ROOT_PATH . '/includes/footer.php'; ?>
+
+</body>
+</html>
